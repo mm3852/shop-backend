@@ -4,7 +4,7 @@
   "description": "An app which will will allow users to book lessons.",
   "main": "server.js",
   "scripts": {
-    "devStart": "node server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
