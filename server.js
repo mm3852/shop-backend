@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-app.use(cors());
+
 const path = require("path");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
+app.use(cors());
 const uri =
   "mongodb+srv://abidmiah015:PiKkchwwKKMF2HM5@cluster0.3egxd6z.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {
