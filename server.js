@@ -1,4 +1,6 @@
 const express = require("express");
+const cors = require("cors");
+app.use(cors());
 const path = require("path");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
@@ -81,7 +83,7 @@ async function run() {
 
     app.use((req, res) => {
       res.status(404);
-      res.send("<h1>Error 404: Resource not found</h1>");
+      res.send("<h1>Error 404: Resource not found. test</h1>");
     });
 
     const port = process.env.PORT || 3000;
