@@ -83,8 +83,9 @@ async function run() {
       res.send("<h1>Error 404: Resource not found</h1>");
     });
 
+    const port = process.env.PORT || 3000;
     app.listen(3000, () => {
-      console.log("App listening on port 3000");
+      console.log("App listening on port " + port);
     });
   } finally {
   }
