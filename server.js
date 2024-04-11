@@ -1,10 +1,11 @@
 const express = require("express");
 const path = require("path");
-
+const cors = require("cors");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
 
-("mongodb+srv://abidmiah015:PiKkchwwKKMF2HM5@cluster0.3egxd6z.mongodb.net/?retryWrites=true&w=majority");
+const uri =
+  "mongodb+srv://abidmiah015:PiKkchwwKKMF2HM5@cluster0.3egxd6z.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -17,6 +18,11 @@ let database;
 
 app.use(express.static(path.join(__dirname, "..", "/front-end")));
 app.use(express.json());
+app.use(
+  cors({
+    origin: "Lesson-shop-env.eba-a9ygfdpz.us-east-1.elasticbeanstalk.com ",
+  })
+);
 async function run() {
   try {
     // Connect the client to the server
