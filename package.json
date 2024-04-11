@@ -4,6 +4,7 @@
   "description": "An app which will will allow users to book lessons.",
   "main": "server.js",
   "scripts": {
+    "start": "node app.js",
     "devStart": "nodemon server.js"
   },
   "author": "",
