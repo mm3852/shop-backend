@@ -1,14 +1,9 @@
 const express = require("express");
 const path = require("path");
-const cors = require("cors");
+
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const app = express();
-app.use(
-  cors({
-    origin:
-      "http://lesson-shop-env.eba-a9ygfdpz.us-east-1.elasticbeanstalk.com/",
-  })
-);
+
 ("mongodb+srv://abidmiah015:PiKkchwwKKMF2HM5@cluster0.3egxd6z.mongodb.net/?retryWrites=true&w=majority");
 const client = new MongoClient(uri, {
   serverApi: {
